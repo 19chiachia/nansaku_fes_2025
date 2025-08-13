@@ -115,6 +115,13 @@ img{max-width:100%; display:block}
   margin:.2rem 0 .3rem;
   text-shadow: 0 4px 30px rgba(0,0,0,.6);
 }
+.hero-inner h2{
+  font-family:"Kaisei Decol", serif;
+  font-size: clamp(2.2rem, 6vw, 2.5rem);
+  line-height:1.1;
+  margin:.2rem 0 .3rem;
+  text-shadow: 0 4px 30px rgba(0,0,0,.6);
+}
 .hero-subtitle{ opacity:.9; margin-bottom:1rem; }
 .cta{
   display:inline-block; padding:.75rem 1.1rem; border-radius:9999px;
