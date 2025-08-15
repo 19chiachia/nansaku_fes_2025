@@ -46,11 +46,12 @@ img{max-width:100%; display:block}
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .brand{ display:flex; align-items:center; gap:.6rem; color:#f1f5f9; }
-.brand-badge{
-  width:36px; height:36px; border-radius:50%;
-  display:grid; place-items:center;
-  background: radial-gradient(circle at 30% 30%, #fff, #fde68a);
-  color:#dc2626; font-weight:900; box-shadow: var(--shadow);
+.brand-logo {
+  width: 52px;       /* ロゴの横幅 */
+  height: 52px;      /* 必要に応じて縦幅も指定 */
+  object-fit: contain; /* 画像の縦横比を保つ */
+  display: inline-block;
+  vertical-align: middle; /* ブランド名テキストと縦位置を揃える */
 }
 .brand-text{ color:#e5e7eb; font-weight:900; letter-spacing:.06em; font-family:"Kaisei Decol", serif; text-decoration:none;}
 
