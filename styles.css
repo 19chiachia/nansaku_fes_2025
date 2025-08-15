@@ -19,10 +19,7 @@ body{
   margin:0;
   font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color:#111827;
-  background:
-    radial-gradient(1000px 500px at 10% -10%, #1e293b 0%, transparent 60%),
-    radial-gradient(900px 400px at 90% -10%, #172554 0%, transparent 60%),
-    var(--bg);
+  background-color: #111827;
   line-height:1.6;
   padding-top: 60px; /*ヘッダー用*/
 }
