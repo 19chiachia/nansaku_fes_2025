@@ -116,7 +116,9 @@ img{max-width:100%; display:block}
   background:
     radial-gradient(1200px 400px at 50% 130%, rgba(255,255,255,.15), transparent 60%),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><defs><pattern id="asanoha" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 0L40 20L20 40L0 20Z" fill="none" stroke="%23ffffff22"/></pattern></defs><rect width="100%" height="100%" fill="url(%23asanoha)"/></svg>');
-  background-size: cover;
+    background-size: cover;
+  background-image: url("images/hero/back1.png");
+  background-position: center 70%;
   z-index:-2;
 }
 .lanterns{ position:absolute; inset:auto 0 0 0; display:flex; justify-content:center; gap:8vw; padding-bottom:.8rem; z-index:-1 }
@@ -240,6 +242,7 @@ display: none; /* 初期状態は非表示にする */}
 }
 .game.shateki {
   background-image: url("images/features/shateki.jpg");
+  background-position: center 30%;
 }
 
 /* Timeline */
