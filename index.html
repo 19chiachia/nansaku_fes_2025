@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
   <!-- アクセシビリティ用 スキップリンク -->
@@ -18,7 +20,7 @@
   <header class="site-header" aria-label="ヘッダー">
     <div class="brand">
       <span class="brand-badge" aria-hidden="true">祭</span>
-      <span class="brand-text">南朔生誕夏祭り2025</span>
+      <a class="brand-text" href="#hero">南朔生誕夏祭り2025</a>
     </div>
 
     <!-- CSSのみで開閉できるハンバーガーメニュー -->
@@ -38,7 +40,7 @@
   </header>
 
   <!-- ヒーロー -->
-  <section class="hero" role="banner" aria-label="メインビジュアル">
+  <section id= "hero" class="hero" role="banner" aria-label="メインビジュアル">
     <div class="hero-inner">
       <h1><ruby>南朔生誕夏祭り<rt>Nansaku Birth Summer Fes</rt></ruby></h1>
       <h2>2025</h2>
@@ -63,14 +65,16 @@
         <h2>お知らせ</h2>
       </div>
       <ul class="news-list">
+        <li><time datetime="2025-08-14">8/14</time> 急に当日午後休とるとか言われてピンチ！準備時間が大幅減</li>
         <li><time datetime="2025-08-13">8/13</time> ホームページ制作に取り掛かる</li>
-        <li><time datetime="2025-08-05">8/5</time> カステラおいしいのでまた作って証拠隠滅</li>
+        <li><time datetime="2025-08-05">8/5</time> カステラがおいしいのでまた作って証拠隠滅</li>
         <li><time datetime="2025-08-04">8/4</time> 猫カステラの型を購入・練習</li>
         <li><time datetime="2025-07-30">7/25</time> 練習用ホームページを制作</li>
         <li><time datetime="2025-07-29">7/29</time> ポスターとホームページの制作決定</li>
         <li><time datetime="2025-07-25">7/25</time> バースデー用品の偵察</li>
         <li><time datetime="2025-07-25">7/25</time> 誕生日サプライズをおうち縁日に決定</li>
       </ul>
+      <button id="toggle-news" class="more-btn">もっと見る</button>
     </section>
 
     <!-- 出店・見どころ -->
@@ -114,7 +118,7 @@
           <div class="card-media food potato" aria-hidden="true"></div>
           <div class="card-body">
             <h3>ぽてぽてぽてと。</h3>
-            <p>南朔の大好物。油控え目なので意外とヘルシー？</p>
+            <p>南朔の大好物ハッシュドポテト。油控え目なので意外とヘルシー？</p>
             <ul class="tags"><li>大好物</li><li>ほくほく</li></ul>
           </div>
         </article>
@@ -138,7 +142,7 @@
         </article>
 
         <article class="card">
-          <div class="card-media food chocobanana" aria-hidden="true"></div>
+          <div class="card-media food banana" aria-hidden="true"></div>
           <div class="card-body">
             <h3>ちょこっとちょこばなな</h3>
             <p>みんな大好き甘い誘惑。カラーチョコがうれしい</p>
@@ -147,7 +151,7 @@
         </article>
 
         <article class="card">
-          <div class="card-media food babycastella" aria-hidden="true"></div>
+          <div class="card-media food castella" aria-hidden="true"></div>
           <div class="card-body">
             <h3>ねこかすてら</h3>
             <p>ねこ型のカステラ。かわいい見た目と甘さで癒されよう</p>
@@ -201,11 +205,29 @@
       <div class="section-head">
         <h2>フォト</h2>
       </div>
-      <div class="gallery">
-        <figure class="ph ph-a"><figcaption>屋台のれん</figcaption></figure>
-        <figure class="ph ph-b"><figcaption>たこ焼き</figcaption></figure>
-        <figure class="ph ph-c"><figcaption>縁日ランタン</figcaption></figure>
-        <figure class="ph ph-d"><figcaption>ヨーヨー</figcaption></figure>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <figure class="swiper-slide ph ph-a"><figcaption>9/19</figcaption></figure>
+          <figure class="swiper-slide ph ph-b"><figcaption>9/21</figcaption></figure>
+          <figure class="swiper-slide ph ph-c"><figcaption>10/13</figcaption></figure>
+          <figure class="swiper-slide ph ph-d"><figcaption>10/13</figcaption></figure>
+          <figure class="swiper-slide ph ph-e"><figcaption>12/6</figcaption></figure>
+          <figure class="swiper-slide ph ph-f"><figcaption>12/29</figcaption></figure>
+          <figure class="swiper-slide ph ph-g"><figcaption>1/25</figcaption></figure>
+          <figure class="swiper-slide ph ph-h"><figcaption>2/23</figcaption></figure>
+          <figure class="swiper-slide ph ph-i"><figcaption>2/25</figcaption></figure>
+          <figure class="swiper-slide ph ph-j"><figcaption>2/25</figcaption></figure>
+          <figure class="swiper-slide ph ph-k"><figcaption>2/26</figcaption></figure>
+          <figure class="swiper-slide ph ph-l"><figcaption>2/26</figcaption></figure>
+          <figure class="swiper-slide ph ph-m"><figcaption>2/26</figcaption></figure>
+          <figure class="swiper-slide ph ph-n"><figcaption>2/26</figcaption></figure>
+          <figure class="swiper-slide ph ph-o"><figcaption>4/5</figcaption></figure>
+          <figure class="swiper-slide ph ph-p"><figcaption>5/6</figcaption></figure>
+          <figure class="swiper-slide ph ph-q"><figcaption>5/17</figcaption></figure>
+          <figure class="swiper-slide ph ph-r"><figcaption>8/2</figcaption></figure>
+          <figure class="swiper-slide ph ph-s"><figcaption>8/12</figcaption></figure>
+
+        </div>
       </div>
     </section>
 
@@ -225,5 +247,11 @@
     <p class="org">主催：南朔生誕夏祭り2025実行委員会</p>
     <p class="copy">© 2025 Nansaku Birth Summer Fes. All rights reserved.</p>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+
 </body>
 </html>
