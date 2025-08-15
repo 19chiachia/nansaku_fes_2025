@@ -117,7 +117,7 @@ img{max-width:100%; display:block}
     radial-gradient(1200px 400px at 50% 130%, rgba(255,255,255,.15), transparent 60%),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><defs><pattern id="asanoha" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 0L40 20L20 40L0 20Z" fill="none" stroke="%23ffffff22"/></pattern></defs><rect width="100%" height="100%" fill="url(%23asanoha)"/></svg>');
     background-size: cover;
-  background-image: url("images/hero/back1.png");
+  background-image: url("images/hero/back.png");
   background-position: center 70%;
   z-index:-2;
 }
@@ -251,28 +251,6 @@ display: none; /* 初期状態は非表示にする */}
 .time{ font-weight:800; color:#fde68a; }
 .desc{ background:rgba(255,255,255,.06); padding:.6rem .8rem; border-radius:10px; border:1px solid rgba(255,255,255,.08) }
 
-/* Map */
-.map-hint{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center; justify-content:center; margin: 0 auto 1rem; color:#cbd5e1 }
-.legend{ display:flex; align-items:center; gap:.4rem }
-.dot{ width:10px; height:10px; border-radius:50% }
-.dot.food{ background:#fb7185 }
-.dot.game{ background:#60a5fa }
-.dot.misc{ background:#a3e635 }
-
-.map-grid{
-  --size: min(160px, 40vw);
-  display:grid; grid-template-columns: repeat(2, var(--size)); grid-auto-rows: var(--size);
-  gap:.6rem; justify-content:center;
-}
-.map-cell{
-  display:grid; place-items:center; text-align:center; padding:1rem; border-radius:16px; font-weight:700;
-  color:#0b1022; background:#f1f5f9;
-  box-shadow: var(--shadow);
-}
-.map-cell.food{ background: linear-gradient(180deg,#ffe4e6,#fecdd3) }
-.map-cell.game{ background: linear-gradient(180deg,#dbeafe,#bfdbfe) }
-.map-cell.misc{ background: linear-gradient(180deg,#ecfccb,#d9f99d) }
-
 /* Gallery */
 .gallery{
   max-width:1100px; margin:0 auto; display:grid; gap:.6rem; grid-template-columns: repeat(2, 1fr);
@@ -378,6 +356,32 @@ display: none; /* 初期状態は非表示にする */}
   background:rgba(2,6,23,.6); color:#e5e7eb; border:1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow);
 }
+/* Googleマップのレスポンシブ設定 */
+.map-container {
+  position: relative;
+  width: 50%;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: 16px; /* 角丸 */
+  box-shadow: var(--shadow); /* 影をつけたい場合 */
+  margin: 1rem auto;  /* 上下1remのマージン、左右自動で中央寄せ */
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* スマホ表示（幅768px以下）のときだけ適用 */
+@media screen and (max-width: 959px) {
+  .map-container {
+    width: 80%;
+    height: 20rem;
+  }
+}
+
 
 /* Footer */
 .site-footer{
