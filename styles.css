@@ -238,9 +238,17 @@ display: none; /* 初期状態は非表示にする */}
 .food.castella {
   background-image: url("images/features/castella.jpg");
 }
+.food.lamne {
+  background-image: url("images/features/lamne.jpg");
+  background-position: center 35%;
+}
 .game.shateki {
   background-image: url("images/features/shateki.jpg");
   background-position: center 30%;
+}
+.game.fireworks {
+  background-image: url("images/features/Fireworks.jpg");
+  background-position: center 20%;
 }
 
 /* Timeline */
@@ -329,6 +337,14 @@ display: none; /* 初期状態は非表示にする */}
 .ph-s {
   background-image: url("images/gallery/s.jpg");
   background-position: center 60%;
+}
+.ph-t {
+  background-image: url("images/gallery/t.jpg");
+  background-position: center 65%;
+}
+.ph-u {
+  background-image: url("images/gallery/u.jpg");
+  background-position: center 65%;
 }
 
 .swiper {

@@ -17,8 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   toggleBtn.addEventListener("click", function () {
-    expanded = !expanded;
-    updateView();
+    if (expanded) {
+      expanded =false;
+      updateView();
+      
+      setTimeout(() => {
+        const targetElement = document.querySelector("#news");
+        const header = document.querySelector("header"); // 固定ヘッダー
+        if (targetElement) {
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetPosition =
+            targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
+    } else {
+      expanded = true;
+      updateView();
+    }
   });
 
   // 初期表示（3件だけ）
